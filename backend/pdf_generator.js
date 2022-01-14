@@ -79,13 +79,15 @@ module.exports = function(data, id){
           }
           i--;
         }
-        return "$"+int.join("").substr(0, int.length-1) + "." + twoDigit(numString[1]);
+        // return "$"+int.join("").substr(0, int.length-1) + "." + twoDigit(numString[1]);
+        return int.join("").substr(0, int.length-1) + "." + twoDigit(numString[1]);
       } else return this.money(str.join(""))
     },
     negMoney: function(str){
       if(!isNaN(parseFloat(str))){
         if(parseFloat(str) < 0){
-          return `-$${Math.abs($.round(parseFloat(str), 2))}`
+          return `-${Math.abs($.round(parseFloat(str), 2))}`
+          // return `-$${Math.abs($.round(parseFloat(str), 2))}`
         } else {
           return this.money(str)
         }
@@ -103,7 +105,8 @@ module.exports = function(data, id){
           }
           i--;
         }
-        return "$"+int.join("").substr(0, int.length-1);
+        return int.join("").substr(0, int.length-1);
+        // return "$"+int.join("").substr(0, int.length-1);
       } else return this.moneyInt(str.join(""))
     },
     chartMoney: function(str){

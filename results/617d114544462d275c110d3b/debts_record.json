@@ -1,0 +1,1 @@
+[{"type":"m","name":"M1","balance":30000,"payment":1280.83,"overpay":0,"rate":2.35,"yearsLeft":2,"installments":24,"installmentsWithOverpay":24,"interest":739.8999999999999},{"type":"d","name":"D1","balance":5000,"minPayment":250,"actualPayment":250,"rate":5,"overpay":0,"installments":21,"interest":231.59000000000003}]

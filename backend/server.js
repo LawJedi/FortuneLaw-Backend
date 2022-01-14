@@ -42,7 +42,7 @@ const hubspot = require("./extra/hubspot");
 
 let client = null;
 const mongo = require("mongodb");
-mongo.connect("mongodb://127.0.0.1:27017/", {
+mongo.connect("mongodb+srv://admin:fortunelaw@c0.cbypr.mongodb.net/test?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(c => {
@@ -115,9 +115,9 @@ app.post("/debts", exp.json(), async function(req, res){
     }
 
     const _path = path.join(__dirname, "..", "results", id);
-    fs.rmdirSync(_path, {
-      recursive: true
-    })
+    // fs.rmdirSync(_path, {
+    //   recursive: true
+    // })
     fs.mkdirSync(_path, {
       recursive: true
     });
@@ -309,7 +309,8 @@ app.use("/client", customer);
 app.use("/admin", admin);
 app.use("/result", result);
 
-app.listen(process.env.port, ()=>{
-  console.log("Fortune Law @ "+process.env.port)
+app.listen(process.env.PORT, ()=>{
+  console.log("Fortune Law @ "+process.env.PORT)
 })
+
 // module.exports = app;

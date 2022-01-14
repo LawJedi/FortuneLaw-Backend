@@ -10,7 +10,7 @@ const urlShortener = require("node-url-shortener");
 const mailer = require("./mail");
 
 let client = null;
-mongo.connect("mongodb://127.0.0.1:27017/", {
+mongo.connect("mongodb+srv://admin:fortunelaw@c0.cbypr.mongodb.net/test?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(c => {

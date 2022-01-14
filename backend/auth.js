@@ -1,7 +1,7 @@
 const mongo = require("mongodb");
 
 let client = null;
-mongo.connect("mongodb://127.0.0.1/", {
+mongo.connect("mongodb+srv://admin:fortunelaw@c0.cbypr.mongodb.net/test?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }, function(err, c){
