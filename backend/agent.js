@@ -4,7 +4,7 @@ const crypt = require("crypto")
 
 let client = null;
 const mongo = require("mongodb");
-mongo.connect("mongodb+srv://admin:fortunelaw@c0.cbypr.mongodb.net/test?retryWrites=true&w=majority", {
+mongo.connect(process.env.MONGOURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(c => {
