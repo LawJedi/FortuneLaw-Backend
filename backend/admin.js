@@ -3,7 +3,7 @@ const router = exp.Router();
 const mongo = require("mongodb");
 
 let client = null;
-mongo.connect("mongodb+srv://admin:fortunelaw@c0.cbypr.mongodb.net/test?retryWrites=true&w=majority", {
+mongo.connect(process.env.MONGOURI, {
   useUnifiedTopology: true,
   useNewUrlParser: true
 }, async function(err, c){
