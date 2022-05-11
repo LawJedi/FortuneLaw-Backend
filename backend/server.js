@@ -2,11 +2,14 @@ const exp = require("express");
 const multer = require("multer");
 const app = exp();
 const cors = require("cors")
-app.use(cors({
-  origin: ["https://fortune-law.netlify.app","http://goldenigic.com","https://goldenigic.com", "http://localhost:8080"],
-  allowedHeaders: ["Content-type", "Authorization"]
-}))
+//app.use(cors({
+  //origin: ["https://fortune-law.netlify.app","http://goldenigic.com","https://goldenigic.com", "http://localhost:8080"],
+ // allowedHeaders: ["Content-type", "Authorization"]
+//}))
 
+const https = require('https');
+//console.log("process.env",process.env)
+app.use(cors());
 const fs = require("fs");
 const path = require("path");
 const crypt = require("crypto");
@@ -16,6 +19,16 @@ const customer = require("./client")
 const admin = require("./admin");
 const result = require("./result");
 const agent = require("./agent")
+
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/fortuneplanning.com/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/fortuneplanning.com/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/fortuneplanning.com/chain.pem', 'utf8');
+
+const credentials = {
+	key : privateKey,
+	cert : certificate,
+	ca : ca
+	}
 
 const generateRef = () => {
   return Buffer.from(crypt.randomBytes(6)).toString("hex");
@@ -39,7 +52,7 @@ const readers = {
 }
 
 const hubspot = require("./extra/hubspot");
-
+console.log(process.env.MONGOURI)
 let client = null;
 const mongo = require("mongodb");
 mongo.connect(process.env.MONGOURI, {
@@ -309,7 +322,10 @@ app.use("/client", customer);
 app.use("/admin", admin);
 app.use("/result", result);
 
-app.listen(process.env.PORT, ()=>{
+
+const httpsServer = https.createServer(credentials, app);
+
+httpsServer.listen(process.env.PORT, ()=>{
   console.log("Fortune Law @ "+process.env.PORT)
 })
 

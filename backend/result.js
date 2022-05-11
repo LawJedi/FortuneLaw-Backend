@@ -27,8 +27,8 @@ router.get("/:id/pdf", async function(req, res){
   } else res.status(400).json({msg: "Cannot generate PDF. Need to run calculations first."})
 })
 
-router.get("/:id/pdf/download", async function(req, res){
-  var {id} = req.params;
+router.get("/:id/pdf/download/:name", async function(req, res){
+  var {id,name} = req.params;
   var filePath = path.join(__dirname, "..", "results", id);
   if(fs.existsSync(filePath)){
     let pdfPath = path.join(filePath, "result.pdf");
