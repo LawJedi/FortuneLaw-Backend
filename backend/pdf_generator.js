@@ -12,6 +12,7 @@ function twoDigit(str){
 }
 
 module.exports = function(data, id){
+console.log("data",data)
   let flags = {
     mortPlural: false,
     mortPresent: false,
