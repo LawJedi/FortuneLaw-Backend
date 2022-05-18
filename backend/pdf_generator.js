@@ -1248,4 +1248,3 @@ module.exports = function(data, id) {
         doc.save(path.join(__dirname, "..", "results", id, "result.pdf"))
             // doc.save(path.join(__dirname, "result.pdf"))
     } // doc.save(path.join(__dirname, "result.pdf"))
-}
