@@ -288,7 +288,7 @@ module.exports = function(data, id) {
 
     doc.addPage()
     $.pageNumber()
-    doc.addImage($.img("working 1_2", "png"), 14, 234, 180, 38.25)
+    doc.addImage($.img("working 1_2", "png"), 14, 234, 180, 38.25);
     doc.addImage($.img("working 2_1", "png"), 15, 25, 180, 142.1);
 
     doc.addPage();
