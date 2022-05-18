@@ -296,7 +296,7 @@ module.exports = function(data, id) {
         $.pageNumber()
         doc.addImage($.img("working3", "png"), 15, 25, 180, 72.34);
         doc.addImage($.img("Working 2_2", "png"), 16, 165, 180, 100);
-
+        console.lo("try");
         // current debt trajectory
         doc.addPage();
         detailHeader();
