@@ -288,18 +288,20 @@ module.exports = function(data, id) {
 
         doc.addPage()
         $.pageNumber()
-        doc.addImage($.img("working 2_1", "png"), 15, 25, 180, 142.1);
         doc.addImage($.img("working 1_2", "png"), 14, 234, 180, 38.25);
+        doc.addImage($.img("working 2_1", "png"), 15, 25, 180, 142.1);
+
 
 
         doc.addPage();
         $.pageNumber()
-        doc.addImage($.img("working3", "png"), 15, 25, 180, 72.34);
         doc.addImage($.img("Working 2_2", "png"), 16, 165, 180, 100);
-        console.lo("try");
+        doc.addImage($.img("working3", "png"), 15, 25, 180, 72.34);
+
+        console.log("try");
         // current debt trajectory
         doc.addPage();
-        detailHeader();
+        detailHeader()
 
         doc.setFontSize(26);
         normal()
