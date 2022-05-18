@@ -283,17 +283,17 @@ module.exports = function(data, id) {
         align: "center"
     })
     doc.addImage($.img("working1", "png"), 15, 50, 180, 188.66);
-    doc.addImage($.img("working 1_2", "png"), 14, 234, 180, 38.25)
     $.pageNumber()
 
 
     doc.addPage()
     $.pageNumber()
+    doc.addImage($.img("working 1_2", "png"), 14, 234, 180, 38.25)
     doc.addImage($.img("working 2_1", "png"), 15, 25, 180, 142.1);
-    doc.addImage($.img("Working 2_2", "png"), 16, 165, 180, 100);
 
     doc.addPage();
     $.pageNumber()
+    doc.addImage($.img("Working 2_2", "png"), 16, 165, 180, 100);
     doc.addImage($.img("working3", "png"), 15, 25, 180, 72.34);
 
     // current debt trajectory
