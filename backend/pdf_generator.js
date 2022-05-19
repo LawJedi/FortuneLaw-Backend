@@ -279,26 +279,24 @@ module.exports = function(data, id) {
         doc.setTextColor("#000");
         doc.setFontSize(18);
         doc.setFont("Helvetica", "bold");
-        doc.text("How Does the G.O.L.D.E.N. Program Work ?", doc.internal.pageSize.getWidth() / 2, 40, {
+        doc.text("How Does the   G.O.L.D.E.N. Program Work ?", doc.internal.pageSize.getWidth() / 2, 40, {
             align: "center"
         })
-        doc.addImage($.img("working1", "png"), 15, 50, 180, 188.66);
-        $.pageNumber()
+        doc.addImage($.img("working1_1.2", "png"), 15, 50, 180, 165.2);
+        // doc.addImage($.img("working 1_2", "png"), 14, 234, 180, 38.25)
 
+        $.pageNumber()
 
         doc.addPage()
         $.pageNumber()
-        doc.addImage($.img("working 1_2", "png"), 14, 234, 180, 38.25);
-        doc.addImage($.img("working 2_1", "png"), 15, 25, 180, 142.1);
-
+            // doc.addImage($.img("working 1_2", "png"), 14, 234, 180, 38.25);
+        doc.addImage($.img("working 2_1", "png"), 15, 50, 180, 165.2);
 
 
         doc.addPage();
         $.pageNumber()
-        doc.addImage($.img("Working 2_2", "png"), 16, 165, 180, 100);
-        doc.addImage($.img("working3", "png"), 15, 25, 180, 72.34);
-
-        console.log("try");
+        doc.addImage($.img("working2_2.3", "png"), 15, 50, 180, 165.2);
+        // doc.addImage($.img("working3", "png"), 15, 25, 180, 72.34);
         // current debt trajectory
         doc.addPage();
         detailHeader()
@@ -1122,7 +1120,7 @@ module.exports = function(data, id) {
                 header: "20% CV",
                 dataKey: "cv20"
             }, {
-                header: "Savings outside IGIC",
+                header: "Savings",
                 dataKey: "sb"
             }, {
                 header: "Total Liquidity",
@@ -1225,7 +1223,7 @@ module.exports = function(data, id) {
                     header: "20% CV",
                     dataKey: "cv20"
                 }, {
-                    header: "Savings outside IGIC",
+                    header: "Savings",
                     dataKey: "sb"
                 }, {
                     header: "Total Liquidity",
