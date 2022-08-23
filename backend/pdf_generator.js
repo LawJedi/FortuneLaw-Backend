@@ -278,17 +278,17 @@ module.exports = function(data, id) {
             align:"justify",maxWidth:160
         });
         doc.text("Among the assumptions made are the following:.", 24,76)
-        doc.text('\u2022 '+ "That you will qualify for life insurance under the presented parameters: that your health", 28,83)
-        doc.text("and history are such that you are insurable; that you have enough insurable interest (", 32,88)
-        doc.text("based on, among other things, your age and income) to qualify for the amount of d -", 32,93)
-        doc.text("eath benefit in the plan; and that you have enough income and liquid assets to qualify  ", 32,98)
-        doc.text("for the amount of premium going into the plan.", 32,103)
+        doc.text('\u2022 '+ "That you will qualify for life insurance under the presented parameters: that your hea-", 28,83)
+        doc.text("lth and history are such that you are insurable; that you have enough insurable interest", 32,88)
+        doc.text("(based on, among other things, your age and income) to qualify for the amount of d-", 32,93)
+        doc.text("eath benefit in the plan; and that you have enough income and liquid assets to qua-", 32,98)
+        doc.text("lify for the amount of premium going into the plan.", 32,103)
         doc.text('\u2022 '+ "That the insurance company providing coverage will continue to pay dividends at their", 28,110)
         doc.text("projected rate (the rate projected in the illustration, which is based on the current", 32,115)
         doc.text("dividend scale).", 32,120)
-        doc.text('\u2022 '+ "That the debt information you provided us is accurate, and the interest rates presented", 28,125)
-        doc.text("will not change. That the principal balance will not increase and will decrease as you", 32,130)
-        doc.text("continue to make your debt payments.", 32,135)
+        doc.text('\u2022 '+ "That the debt information you provided us is accurate, and the interest rates presen-", 28,125)
+        doc.text("ted will not change. That the principal balance will not increase and will decrease as", 32,130)
+        doc.text("you continue to make your debt payments.", 32,135)
         doc.text('\u2022 '+ "That you will follow the plan as presented. Although the plan is flexible, and you have", 28,140)
         doc.text("the freedom to make changes as time passes (and you should as circumstances arise),", 32,145)
         doc.text("any changes you make to your plan will have an effect on the overall outcome.", 32,150)
@@ -416,21 +416,15 @@ module.exports = function(data, id) {
         doc.text(insurance, 24, 111,{
             align:"justify",maxWidth:160
         });
-        doc.text("\u2022 "+ "Do you have a qualified account, like a 401(k), IRA, or SEP? If so, let’s use it. Ours is a retirement",28, 138,{
-            align:"justify",maxWidth:157
-        })
+        doc.text("\u2022 "+ "Do you have a qualified account, like a 401(k), IRA, or SEP? If so, let’s use it. Ours is a retirement",28, 138)
         doc.text("account, but better. ",32, 143,{
             align:"justify",maxWidth:152
         })
-        doc.text("\u2022 "+ "Are you regularly contributing to a savings account or retirement account? If so, let’s redirect ",28, 148,{
-            align:"justify",maxWidth:157
-        })
+        doc.text("\u2022 "+ "Are you regularly contributing to a savings account or retirement account? If so, let’s redirect ",28, 148)
         doc.text("that money into this superior account.",32, 153,{
             align:"justify",maxWidth:152
         })
-        doc.text("\u2022 "+ "Are you overpaying on any of your debts? If so, let’s redirect the overpayments because ours is ",28, 158,{
-            align:"justify",maxWidth:157
-        })
+        doc.text("\u2022 "+ "Are you overpaying on any of your debts? If so, let’s redirect the overpayments because ours is ",28, 158)
         doc.text("a debt elimination program, but better. Plus, we want that money working for you, not paying ",31, 163,{
             align:"justify",maxWidth:157
         })
