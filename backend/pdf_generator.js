@@ -284,42 +284,42 @@ module.exports = function(data, id) {
         doc.text(text, 36,83,{
             align:"justify",maxWidth:150
         });
-        doc.text('\u2022 ', 32,110)
+        doc.text('\u2022 ', 32,105)
         var incCom = doc.splitTextToSize("That the insurance company providing coverage will continue to pay dividends at their projected rate (the rate projected in the illustration, which is based on the current dividend scale).",150)
-        doc.text(incCom, 36,110,{
+        doc.text(incCom, 36,105,{
             align:"justify",maxWidth:150
         })
         
-        doc.text('\u2022 ', 32,125)
+        doc.text('\u2022 ', 32,115)
         var debtInf = doc.splitTextToSize("That the debt information you provided us is accurate, and the interest rates presented will not change. That the principal balance will not increase and will decrease as you continue to make your debt payments.")
-        doc.text(debtInf, 36,125,{
+        doc.text(debtInf, 36,115,{
             align:"justify",maxWidth:150
         })
     
-        doc.text('\u2022 ', 32,140)
+        doc.text('\u2022 ', 32,130)
         var planPres = doc.splitTextToSize("That you will follow the plan as presented. Although the plan is flexible, and you have the freedom to make changes as time passes (and you should as circumstances arise), any changes you make to your plan will have an effect on the overall outcome.",150)
-        doc.text(planPres, 36,140,{
+        doc.text(planPres, 36,130,{
             align:"justify",maxWidth:150
         })
         var assump = doc.splitTextToSize("If some or all of these assumptions prove, over time, not to be true, it could have anywhere from slight to significant changes to your plan. Although we believe this is among the safest places to put your money and certainly the best option we are aware of to pay off debt without sacrificing retirement and other financial plans, no decision, including decisions related to place your money, is without some risk.", 150)
-        doc.text(assump, 24, 156,{
+        doc.text(assump, 24, 145,{
             align:"justify",maxWidth:161
         });
         var rate = doc.splitTextToSize("All rates of return are projected and are by no means guaranteed. Like all financial plans, we can make recommendations based on patterns in the past and signs about what will happen in the future, but we cannot see the future.", 150)
-        doc.text(rate, 24, 178,{
+        doc.text(rate, 24, 167,{
             align:"justify",maxWidth:161
         });
         var report = doc.splitTextToSize("This report should not be considered legal, financial, or accounting advice. This material has been prepared for informational purposes only and is not solicitation or an offer or buy a security or instrument or to participate in any trading/investment strategy.", 150)
-        doc.text(report, 24, 192,{
+        doc.text(report, 24, 181,{
             align:"justify",maxWidth:161
         });
         var concl = doc.splitTextToSize("The conclusions depicted in the illustrations are based on the specific information you provided, and to the extent anything you provided is imprecise or inaccurate, it will have a profound impact on the numbers presented and could materially impact the value of the illustration for comparative purposes.", 150)
-        doc.text(concl, 24, 206,{
+        doc.text(concl, 24, 195,{
             align:"justify",maxWidth:161
         });
 
         var qualify = doc.splitTextToSize("Not everyone will qualify for an insurance contract. Some will be uninsurable. Others will qualify, but not for the full amount desired. Individual circumstances and qualifications always vary.", 150)
-        doc.text(qualify, 24, 225,{
+        doc.text(qualify, 24, 213,{
             align:"justify",maxWidth:161
         });
 
@@ -425,42 +425,42 @@ module.exports = function(data, id) {
             align:"justify",maxWidth:150
         })
         
-        doc.text("\u2022 ",32, 138)
+        doc.text("\u2022 ",32, 146)
         var qualiAcc = doc.splitTextToSize("Do you have a qualified account, like a 401(k), IRA, or SEP? If so, let’s use it. Ours is a retirement account, but better.",150)
-        doc.text(qualiAcc,36, 138,{
+        doc.text(qualiAcc,36, 146,{
             align:"justify",maxWidth:150
         })
         
-        doc.text("\u2022 ",32, 148)
+        doc.text("\u2022 ",32, 155)
         var regCont = doc.splitTextToSize("Are you regularly contributing to a savings account or retirement account? If so, let’s redirect that money into this superior account.",150)
-        doc.text(regCont,36, 148,{
-            align:"justify",maxWidth:150
-        })
-        doc.text("\u2022 ",32, 158)
-        var termIns = doc.splitTextToSize("Are you paying for term insurance? If so, let’s redirect those premium payments. Ours is life insurance, but better.",150)
-        doc.text(termIns,36,158,{
+        doc.text(regCont,36, 155,{
             align:"justify",maxWidth:150
         })
         doc.text("\u2022 ",32, 163)
+        var termIns = doc.splitTextToSize("Are you paying for term insurance? If so, let’s redirect those premium payments. Ours is life insurance, but better.",150)
+        doc.text(termIns,36,163,{
+            align:"justify",maxWidth:150
+        })
+        doc.text("\u2022 ",32, 172)
         var overdept = doc.splitTextToSize("Are you overpaying on any of your debts? If so, let’s redirect the overpayments because ours is a debt elimination program, but better. Plus, we want that money working for you, not paying debt directly, where it will never work for you again.",150)
-        doc.text(overdept,36, 163,{
+        doc.text(overdept,36, 172,{
             align:"justify",maxWidth:150
         })
         doc.text("for you, not paying  debt directly, where it will never work for you again.",36, 168)
         var Armed = doc.splitTextToSize("Armed with that information, we create an IGICinsurance contract illustration. The advantage we have when we draw up an illustration for an IGICinsurance contract is that, unlike qualified plans and other investments, the insurance contract actually gives you a 30+ year projection of how your money will perform. We can combine those figures with information about your debt to show you how to optimize your money.", 129)
-        doc.text(Armed, 24, 175,{
+        doc.text(Armed, 24, 186,{
             align:"justify",maxWidth:160
         });
         var project = doc.splitTextToSize("With information about your debt, we can project using standard amortization tables, exactly how long it will take you to repay based on your current payment plan, and exactly how much interest you will end up paying. We provide that to you here for sake of comparison.", 129)
-        doc.text(project, 24, 200,{
+        doc.text(project, 24, 212,{
             align:"justify",maxWidth:160
         });
         var cash = doc.splitTextToSize("Now we have two sets of information: We know how much each debt is shrinking every month as you make payments towards the debts, and we know how much your cash value is growing every month as you make premium payments. Then we let our program get to work.", 129)
-        doc.text(cash, 24, 218,{
+        doc.text(cash, 24, 230,{
             align:"justify",maxWidth:160
         });
         var repayment = doc.splitTextToSize("We optimize your debts for repayment (and usually it’s going to be the smallest debt first). Once the balance remaining on your debt reaches 80% of your growing cash value, you take out a loan from the insurance carrier for the exact balance of your debt, and you pay it off.", 129)
-        doc.text(repayment, 24, 238,{
+        doc.text(repayment, 24, 248,{
             align:"justify",maxWidth:160
         });
 
