@@ -277,21 +277,30 @@ module.exports = function(data, id) {
         doc.text(strArr, 24, 50,{
             align:"justify",maxWidth:160
         });
-        doc.text("Among the assumptions made are the following:.", 24,76)
-        doc.text('\u2022 '+ "That you will qualify for life insurance under the presented parameters: that your ", 32,83)
-        doc.text("health and history are such that you are insurable; that you have enough insurable", 36,88)
-        doc.text("interest (based on, among other things, your age and income) to qualify for the", 36,93)
-        doc.text("amount of death benefit in the plan; and that you have enough income and liquid", 36,98)
-        doc.text("assets to qualify for the amount of premium going into the plan.", 36,103)
-        doc.text('\u2022 '+ "That the insurance company providing coverage will continue to pay dividends at", 32,110)
-        doc.text("their projected rate (the rate projected in the illustration, which is based on the", 36,115)
-        doc.text("current dividend scale).", 36,120)
-        doc.text('\u2022 '+ "That the debt information you provided us is accurate, and the interest rates ", 32,125)
-        doc.text("presented will not change. That the principal balance will not increase and will", 35,130)
-        doc.text("decrease as you continue to make your debt payments.", 36,135)
-        doc.text('\u2022 '+ "That you will follow the plan as presented. Although the plan is flexible, and you", 32,140)
-        doc.text("have the freedom to make changes as time passes (and you should as circumstances ", 36,145)
-        doc.text("arise), any changes you make to your plan will have an effect on the overall outcome.", 36,150)
+        doc.text("Among the assumptions made are the following:.", 24, 76)
+        
+        doc.text('\u2022 ', 32,83)
+        var text = doc.splitTextToSize("That you will qualify for life insurance under the presented parameters: that your health and history are such that you are insurable; that you have enough insurable interest (based on, among other things, your age and income) to qualify for the amount of death benefit in the plan; and that you have enough income and liquid assets to qualify for the amount of premium going into the plan.",150)
+        doc.text(text, 36,83,{
+            align:"justify",maxWidth:150
+        });
+        doc.text('\u2022 ', 32,110)
+        var incCom = doc.splitTextToSize("That the insurance company providing coverage will continue to pay dividends at their projected rate (the rate projected in the illustration, which is based on the current dividend scale).",150)
+        doc.text(incCom, 36,110,{
+            align:"justify",maxWidth:150
+        })
+        
+        doc.text('\u2022 ', 32,125)
+        var debtInf = doc.splitTextToSize("That the debt information you provided us is accurate, and the interest rates presented will not change. That the principal balance will not increase and will decrease as you continue to make your debt payments.")
+        doc.text(debtInf, 36,125,{
+            align:"justify",maxWidth:150
+        })
+    
+        doc.text('\u2022 ', 32,140)
+        var planPres = doc.splitTextToSize("That you will follow the plan as presented. Although the plan is flexible, and you have the freedom to make changes as time passes (and you should as circumstances arise), any changes you make to your plan will have an effect on the overall outcome.",150)
+        doc.text(planPres, 36,140,{
+            align:"justify",maxWidth:150
+        })
         var assump = doc.splitTextToSize("If some or all of these assumptions prove, over time, not to be true, it could have anywhere from slight to significant changes to your plan. Although we believe this is among the safest places to put your money and certainly the best option we are aware of to pay off debt without sacrificing retirement and other financial plans, no decision, including decisions related to place your money, is without some risk.", 150)
         doc.text(assump, 24, 156,{
             align:"justify",maxWidth:161
@@ -372,14 +381,11 @@ module.exports = function(data, id) {
         doc.text(tax, 24, 215,{
             align:"justify",maxWidth:160
         });
-        doc.text("\u2022 "+ "It is a liquid fund, much like a savings account, except that instead of growing at ",32,225,{
-            align:"justify",maxWidth:157
-        })
-        doc.text("0.1% in interest, it grows via guaranteed interest and non-guaranteed dividends at a rate ",36,230,{
-            align:"justify",maxWidth:152
-        })
-        doc.text("that usually approaches or exceeds 5%.",36,235,{
-            align:"justify",maxWidth:152
+    
+        doc.text("\u2022 ",32,225)
+        var liqFund = doc.splitTextToSize("It is a liquid fund, much like a savings account, except that instead of growing at 0.1% in interest, it grows via guaranteed interest and non-guaranteed dividends at a rate that usually approaches or exceeds 5%.",150);
+        doc.text(liqFund,36,225,{
+            align:"justify",maxWidth:150
         })
         $.pageNumber()
 
@@ -389,26 +395,20 @@ module.exports = function(data, id) {
         // doc.addImage($.img("working 2_1", "png"), 15, 50, 180, 165.2);
         normal();
         doc.setFontSize(10)
-        doc.text("\u2022 "+ "If used correctly (we will teach you how), all the growth in the account is tax-free and therefore",32, 50,{
-            align:"justify",maxWidth:157
+        doc.text("\u2022 ",32, 50)
+        var growHow = doc.splitTextToSize("If used correctly (we will teach you how), all the growth in the account is tax-free and therefore creates a tax-free retirement fund. It’s a lot like a Roth account, but without the contribution limits, restrictive investment parameters, and lack of guarantees.",150)
+        doc.text(growHow,36, 50,{
+            align:"justify",maxWidth:150
         })
-        doc.text("creates a tax-free retirement fund. It’s a lot like a Roth account, but without the contribution",36, 55,{
-            align:"justify",maxWidth:157
+        doc.text("\u2022 ",32, 65)
+        var goldPro = doc.splitTextToSize("When used through the GOLDEN program, it becomes a powerful tool for eliminating debt by converting interest accruing against you to interest earning in your favor.",150)
+        doc.text(goldPro,36, 65,{
+            align:"justify",maxWidth:150
         })
-        doc.text("limits, restrictive investment parameters, and lack of guarantees.",36, 60,{
-            align:"justify",maxWidth:157
-        })
-        doc.text("\u2022 "+ "When used through the GOLDEN program, it becomes a powerful tool for eliminating debt by",32, 65,{
-            align:"justify",maxWidth:157
-        })
-        doc.text("converting interest accruing against you to interest earning in your favor.",36, 70,{
-            align:"justify",maxWidth:157
-        })
-        doc.text("\u2022 "+ "The insurance contract is also a whole-life, permanent life insurance policy, which means it",32, 75,{
-            align:"justify",maxWidth:152
-        })
-        doc.text("comes with a death benefit and living benefits (much like long-term care).",36, 80,{
-            align:"justify",maxWidth:157
+        doc.text("\u2022 "+ "",32, 75)
+        var insContr = doc.splitTextToSize("The insurance contract is also a whole-life, permanent life insurance policy, which means it comes with a death benefit and living benefits (much like long-term care).")
+        doc.text(insContr,36, 75,{
+            align:"justify",maxWidth:150
         })
 
         var insurance = doc.splitTextToSize("Thus, the insurance contract is a savings account and emergency fund (but better because it is growing), a retirement account (but better because your principal is guaranteed against loss, and all funds used for retirement are not taxed), a debt-elimination program (but better because it gets rid of debt faster without having to sacrifice retirement contributions and growth), and a life insurance contract (but better than term because it is guaranteed and doesn’t expire).", 129)
@@ -419,12 +419,33 @@ module.exports = function(data, id) {
         doc.text(insurance, 24, 111,{
             align:"justify",maxWidth:160
         });
-        doc.text("\u2022 "+ "Do you have a qualified account, like a 401(k), IRA, or SEP? If so, ",32, 138)
-        doc.text("let’s use it. Ours is a retirement account, but better. ",36, 143)
-        doc.text("\u2022 "+ "Are you regularly contributing to a savings account or retirement account? ",32, 148)
-        doc.text("If so, let’s redirect  that money into this superior account.",36, 153)
-        doc.text("\u2022 "+ "Are you overpaying on any of your debts? If so, let’s redirect the  ",32, 158)
-        doc.text("overpayments because ours is a debt elimination program, but better. Plus, we want that money working ",32, 163)
+        doc.text("\u2022 ",32, 138)
+        var qualiSav = doc.splitTextToSize("Do you have a savings account/emergency fund? If so, let’s use it. Ours is a savings account and emergency fund, but better.",150)
+        doc.text(qualiSav,36, 138,{
+            align:"justify",maxWidth:150
+        })
+        
+        doc.text("\u2022 ",32, 138)
+        var qualiAcc = doc.splitTextToSize("Do you have a qualified account, like a 401(k), IRA, or SEP? If so, let’s use it. Ours is a retirement account, but better.",150)
+        doc.text(qualiAcc,36, 138,{
+            align:"justify",maxWidth:150
+        })
+        
+        doc.text("\u2022 ",32, 148)
+        var regCont = doc.splitTextToSize("Are you regularly contributing to a savings account or retirement account? If so, let’s redirect that money into this superior account.",150)
+        doc.text(regCont,36, 148,{
+            align:"justify",maxWidth:150
+        })
+        doc.text("\u2022 ",32, 158)
+        var termIns = doc.splitTextToSize("Are you paying for term insurance? If so, let’s redirect those premium payments. Ours is life insurance, but better.",150)
+        doc.text(termIns,36,158,{
+            align:"justify",maxWidth:150
+        })
+        doc.text("\u2022 ",32, 163)
+        var overdept = doc.splitTextToSize("Are you overpaying on any of your debts? If so, let’s redirect the overpayments because ours is a debt elimination program, but better. Plus, we want that money working for you, not paying debt directly, where it will never work for you again.",150)
+        doc.text(overdept,36, 163,{
+            align:"justify",maxWidth:150
+        })
         doc.text("for you, not paying  debt directly, where it will never work for you again.",36, 168)
         var Armed = doc.splitTextToSize("Armed with that information, we create an IGICinsurance contract illustration. The advantage we have when we draw up an illustration for an IGICinsurance contract is that, unlike qualified plans and other investments, the insurance contract actually gives you a 30+ year projection of how your money will perform. We can combine those figures with information about your debt to show you how to optimize your money.", 129)
         doc.text(Armed, 24, 175,{
