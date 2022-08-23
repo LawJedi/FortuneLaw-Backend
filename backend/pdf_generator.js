@@ -446,7 +446,6 @@ module.exports = function(data, id) {
         doc.text(overdept,36, 172,{
             align:"justify",maxWidth:150
         })
-        doc.text("for you, not paying  debt directly, where it will never work for you again.",36, 168)
         var Armed = doc.splitTextToSize("Armed with that information, we create an IGICinsurance contract illustration. The advantage we have when we draw up an illustration for an IGICinsurance contract is that, unlike qualified plans and other investments, the insurance contract actually gives you a 30+ year projection of how your money will perform. We can combine those figures with information about your debt to show you how to optimize your money.", 129)
         doc.text(Armed, 24, 186,{
             align:"justify",maxWidth:160
